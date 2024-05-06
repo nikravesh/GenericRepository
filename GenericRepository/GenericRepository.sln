@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{13D3DD84-544
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{03ED3796-DA68-4AB3-98B2-DE2FA19E544E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericRepository.Data", "GenericRepository.Domain\GenericRepository.Data.csproj", "{CBEBAC8B-2D32-4E91-9876-774EA487453B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericRepository.Data", "src\GenericRepository.Domain\GenericRepository.Data.csproj", "{CBEBAC8B-2D32-4E91-9876-774EA487453B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
