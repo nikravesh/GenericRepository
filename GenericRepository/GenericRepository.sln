@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{13D3DD84-544D-4A5D-8B38-9DAB68FB8946}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{03ED3796-DA68-4AB3-98B2-DE2FA19E544E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericRepository.Data", "GenericRepository.Domain\GenericRepository.Data.csproj", "{CBEBAC8B-2D32-4E91-9876-774EA487453B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBEBAC8B-2D32-4E91-9876-774EA487453B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBEBAC8B-2D32-4E91-9876-774EA487453B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBEBAC8B-2D32-4E91-9876-774EA487453B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBEBAC8B-2D32-4E91-9876-774EA487453B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CBEBAC8B-2D32-4E91-9876-774EA487453B} = {13D3DD84-544D-4A5D-8B38-9DAB68FB8946}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9C489DA-66B1-4E78-BAD3-D878CD69F683}
+	EndGlobalSection
+EndGlobal
