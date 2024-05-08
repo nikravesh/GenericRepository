@@ -1,4 +1,4 @@
-﻿using GenericRepository.Domain.Customer;
+﻿using GenericRepository.Domain.Customers.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

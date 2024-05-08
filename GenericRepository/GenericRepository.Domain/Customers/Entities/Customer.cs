@@ -1,6 +1,6 @@
 ﻿using GenericRepository.Domain.Common;
 
-namespace GenericRepository.Domain.Customer;
+namespace GenericRepository.Domain.Customers.Entities;
 public class Customer : BaseEntity
 {
     public string CustomerFiratName { get; private set; }

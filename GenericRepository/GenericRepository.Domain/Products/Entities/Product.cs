@@ -1,9 +1,9 @@
 ﻿using GenericRepository.Domain.Common;
 
-namespace GenericRepository.Domain.Products;
+namespace GenericRepository.Domain.Products.Entities;
 public class Product : BaseEntity
 {
-    public string ProductName { get; private set; }    
+    public string ProductName { get; private set; }
 
     public string ProductDescription { get; private set; }
 

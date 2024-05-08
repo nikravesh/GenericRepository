@@ -1,4 +1,4 @@
-﻿using GenericRepository.Domain.Products;
+﻿using GenericRepository.Domain.Products.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

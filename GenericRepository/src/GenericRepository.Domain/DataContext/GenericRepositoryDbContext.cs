@@ -1,7 +1,6 @@
 ﻿using GenericRepository.Data.Base;
-using GenericRepository.Domain.Customer;
-using GenericRepository.Domain.Products;
-
+using GenericRepository.Domain.Customers.Entities;
+using GenericRepository.Domain.Products.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace GenericRepository.Data.DataContext;
