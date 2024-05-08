@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace GenericRepository.Data;
-public class BaseCommandRepository<TDbContext, TEntity, TId>
-    where TDbContext : BaseCommandContext
+namespace GenericRepository.Data.Base;
+public abstract class BaseRepository<TDbContext, TEntity, TId>
+    where TDbContext : BaseDbContext
     where TEntity : class
     where TId : struct
 {
     protected readonly TDbContext _dbContext;
 
-    public BaseCommandRepository(TDbContext dbContext)
+    public BaseRepository(TDbContext dbContext)
     {
         _dbContext = dbContext;
     }
@@ -24,14 +24,16 @@ public class BaseCommandRepository<TDbContext, TEntity, TId>
 
     public void Delete(TId id)
     {
-        TEntity entity = _dbContext.Set<TEntity>().Find(id);
+        TEntity? entity = _dbContext.Set<TEntity>().Find(id);
         _dbContext.Set<TEntity>().Remove(entity);
     }
 
     public async Task DeleteAsync(TId id)
     {
-        TEntity entity = await _dbContext.Set<TEntity>().FindAsync(id);
-        _dbContext.Set<TEntity>().Remove(entity);
+        TEntity? entity = await _dbContext.Set<TEntity>().FindAsync(id);
+
+        if (entity is not null)
+            _dbContext.Set<TEntity>().Remove(entity);
     }
 
     public void Delete(TEntity entity)
@@ -39,12 +41,12 @@ public class BaseCommandRepository<TDbContext, TEntity, TId>
         _dbContext.Set<TEntity>().Remove(entity);
     }
 
-    public TEntity Select(TId id)
+    public TEntity? GetById(TId id)
     {
         return _dbContext.Set<TEntity>().Find(id);
     }
 
-    public virtual async Task<TEntity> SelectAsync(TId id)
+    public virtual async Task<TEntity?> GetByIdAsync(TId id)
     {
         return await _dbContext.Set<TEntity>().FindAsync(id);
     }

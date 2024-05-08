@@ -1,16 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace GenericRepository.Data;
-public class BaseCommandContext : DbContext
+namespace GenericRepository.Data.Base;
+public class BaseDbContext : DbContext
 {
-    public BaseCommandContext(DbContextOptions options) : base(options)
+    public BaseDbContext(DbContextOptions options) : base(options)
     {
     }
 
-    protected BaseCommandContext() { }
+    protected BaseDbContext() { }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
         base.OnModelCreating(modelBuilder);
     }
 
