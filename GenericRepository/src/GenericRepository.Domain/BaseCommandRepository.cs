@@ -3,7 +3,7 @@
 namespace GenericRepository.Data;
 public class BaseCommandRepository<TDbContext, TEntity, TId>
     where TDbContext : BaseCommandContext
-    where TEntity : class    
+    where TEntity : class
     where TId : struct
 {
     protected readonly TDbContext _dbContext;
@@ -37,21 +37,21 @@ public class BaseCommandRepository<TDbContext, TEntity, TId>
     public void Delete(TEntity entity)
     {
         _dbContext.Set<TEntity>().Remove(entity);
-    }    
+    }
 
     public TEntity Select(TId id)
     {
         return _dbContext.Set<TEntity>().Find(id);
     }
 
-    public async Task<TEntity> SelectAsync(TId id)
+    public virtual async Task<TEntity> SelectAsync(TId id)
     {
         return await _dbContext.Set<TEntity>().FindAsync(id);
     }
 
-    public IEnumerable<TEntity> SelectAll()
+    public async Task<IEnumerable<TEntity>> SelectAll()
     {
-        return _dbContext.Set<TEntity>().AsNoTracking();
+        return await _dbContext.Set<TEntity>().AsNoTracking().ToListAsync();
     }
 
     public void Update(TEntity entity)
