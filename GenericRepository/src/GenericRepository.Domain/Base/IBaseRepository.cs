@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GenericRepository.Domain.Base;
-public interface IBaseRepository<TEntity,TId>
+﻿namespace GenericRepository.Domain.Base;
+public interface IBaseRepository<TEntity, TId>
 {
     void Delete(TId id);
     void Delete(TEntity entity);
