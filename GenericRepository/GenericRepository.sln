@@ -6,15 +6,12 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{13D3DD84-544D-4A5D-8B38-9DAB68FB8946}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{03ED3796-DA68-4AB3-98B2-DE2FA19E544E}"
-	ProjectSection(SolutionItems) = preProject
-		GenericRepository.Domain\Products\Product.cs = GenericRepository.Domain\Products\Product.cs
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericRepository.Data", "src\GenericRepository.Domain\GenericRepository.Data.csproj", "{CBEBAC8B-2D32-4E91-9876-774EA487453B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericRepository.Domain", "GenericRepository.Domain\GenericRepository.Domain.csproj", "{841104BA-F114-4D16-9964-D385C8CDE52C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericRepository.Domain", "GenericRepository.Domain\GenericRepository.Domain.csproj", "{841104BA-F114-4D16-9964-D385C8CDE52C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericRepository.API", "GenericRepository.API\GenericRepository.API.csproj", "{D9410E23-9846-48BB-AB8D-79EB3AED705F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericRepository.API", "GenericRepository.API\GenericRepository.API.csproj", "{D9410E23-9846-48BB-AB8D-79EB3AED705F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

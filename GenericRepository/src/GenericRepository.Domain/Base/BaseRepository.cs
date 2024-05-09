@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using GenericRepository.Domain.Base;
+
+using Microsoft.EntityFrameworkCore;
 
 namespace GenericRepository.Data.Base;
-public abstract class BaseRepository<TDbContext, TEntity, TId>
+public abstract class BaseRepository<TDbContext, TEntity, TId> : IBaseRepository<TEntity, TId>
     where TDbContext : BaseDbContext
     where TEntity : class
     where TId : struct
