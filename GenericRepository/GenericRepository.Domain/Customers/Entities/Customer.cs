@@ -3,7 +3,7 @@
 namespace GenericRepository.Domain.Customers.Entities;
 public class Customer : BaseEntity
 {
-    public string CustomerFiratName { get; private set; }
+    public string CustomerFirstName { get; private set; }
 
     public string CustomerLastName { get; private set; }
 
@@ -15,17 +15,17 @@ public class Customer : BaseEntity
 
     public Customer(string customerFirstName, string customerLastName, string customerEmail)
     {
-        CustomerFiratName = customerFirstName;
+        CustomerFirstName = customerFirstName;
         CustomerLastName = customerLastName;
         CustomerEmail = customerEmail;
     }
 
     public static Customer Create(Customer customer)
-        => new(customer.CustomerFiratName, customer.CustomerLastName, customer.CustomerEmail);
+        => new(customer.CustomerFirstName, customer.CustomerLastName, customer.CustomerEmail);
 
     public Customer Update(Customer customer)
     {
-        CustomerFiratName = customer.CustomerFiratName;
+        CustomerFirstName = customer.CustomerFirstName;
         CustomerLastName = customer.CustomerLastName;
         CustomerEmail = customer.CustomerEmail;
 
