@@ -7,11 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{13D3DD84-544
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{03ED3796-DA68-4AB3-98B2-DE2FA19E544E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericRepository.API", "src\GenericRepository.API\GenericRepository.API.csproj", "{D9410E23-9846-48BB-AB8D-79EB3AED705F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericRepository.API", "GenericRepository.API\GenericRepository.API.csproj", "{D9410E23-9846-48BB-AB8D-79EB3AED705F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericRepository.Data", "src\GenericRepository.Data\GenericRepository.Data.csproj", "{B26653AB-53D4-4356-942C-9E3F3DF14A5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericRepository.Data", "GenericRepository.Data\GenericRepository.Data.csproj", "{B26653AB-53D4-4356-942C-9E3F3DF14A5D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericRepository.Domain", "src\GenericRepository.Domain\GenericRepository.Domain.csproj", "{76DD4585-CF8C-4A36-8369-05809E5CA576}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericRepository.Domain", "GenericRepository.Domain\GenericRepository.Domain.csproj", "{76DD4585-CF8C-4A36-8369-05809E5CA576}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

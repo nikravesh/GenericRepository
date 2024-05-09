@@ -15,4 +15,8 @@
     <Folder Include="Controllers\Products\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GenericRepository.Domain\GenericRepository.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

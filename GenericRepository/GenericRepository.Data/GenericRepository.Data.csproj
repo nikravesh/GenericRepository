@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\GenericRepository.Domain\GenericRepository.Domain.csproj" />
+    <ProjectReference Include="..\GenericRepository.Domain\GenericRepository.Domain.csproj" />
   </ItemGroup>
 
 </Project>
