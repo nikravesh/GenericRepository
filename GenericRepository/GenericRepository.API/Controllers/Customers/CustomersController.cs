@@ -1,4 +1,6 @@
 ﻿using GenericRepository.Domain.Customers.Repository;
+
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GenericRepository.API.Controllers.Customers;
@@ -16,5 +18,7 @@ public class CustomersController : ControllerBase
 
     [HttpPost("{id}")]
     public async Task<IActionResult> GetCustomer(long customerId)
-        => Ok(await _customerRepository.GetByIdAsync(customerId));
+    {
+        _customerRepository.
+    }
 }
