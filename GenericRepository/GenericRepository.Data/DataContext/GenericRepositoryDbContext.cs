@@ -11,15 +11,10 @@ public class GenericRepositoryDbContext : BaseDbContext
 
     public DbSet<Customer> Customers { get; set; }
 
+
     public GenericRepositoryDbContext(DbContextOptions<GenericRepositoryDbContext> options)
         : base(options)
     {
 
-    }
-
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        base.OnModelCreating(modelBuilder);
-        modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
     }
 }
