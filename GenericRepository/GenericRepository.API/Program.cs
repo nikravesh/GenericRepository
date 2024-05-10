@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddDbContext<GenericRepositoryDbContext>(options => options.UseSqlServer(""));
+builder.Services.AddDbContext<GenericRepositoryDbContext>(options => options.UseSqlServer("Server=.;Initial Catalog=GenericRepositorySample;User Id=sa;Password=241065@lireza"));
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
