@@ -15,7 +15,7 @@ public static class HostingExtension
         services.AddTransient<ICustomerRepository, CustomerRepository>();
         services.AddTransient<IProductRepository, ProductRepository>();
         services.AddDbContext<GenericRepositoryDbContext>(options => options.UseSqlServer(
-        "Server=.;Database=GenericRepoDb;Trusted_Connection=True;", 
+        "Server=.;Initial Catalog=GenericRepoDb;User Id=sa;Password=241065@lireza;TrustServerCertificate=True", 
         x => x.MigrationsAssembly("GenericRepository.Data")));
 
 

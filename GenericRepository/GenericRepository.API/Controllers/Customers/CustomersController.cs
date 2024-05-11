@@ -1,4 +1,8 @@
-﻿using GenericRepository.Domain.Customers.Repository;
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
+
+using GenericRepository.Domain.Customers.Entities;
+using GenericRepository.Domain.Customers.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GenericRepository.API.Controllers.Customers;
@@ -14,7 +18,23 @@ public class CustomersController : ControllerBase
         _customerRepository = customerRepository;
     }
 
-    [HttpPost("{id}")]
-    public async Task<IActionResult> GetCustomer(long customerId)
-        => Ok(await _customerRepository.GetByIdAsync(customerId));
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetCustomer(long id)
+        => Ok(await _customerRepository.GetByIdAsync(id));
+
+    [HttpPost]
+    public async Task<IActionResult> CreateCustomer(Customer customer)
+    {
+        try
+        {
+            await _customerRepository.InsertAsync(customer);
+
+            return Ok(customer);
+        }
+        catch (Exception e)
+        {
+            //Take log
+            return BadRequest(e.Message);
+        }
+    }
 }

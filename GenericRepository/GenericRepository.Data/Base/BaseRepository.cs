@@ -17,17 +17,21 @@ public abstract class BaseRepository<TDbContext, TEntity, TId> : IBaseRepository
     public void Insert(TEntity entity)
     {
         _dbContext.Set<TEntity>().Add(entity);
+        SaveChanges();
     }
 
     public async Task InsertAsync(TEntity entity)
     {
         await _dbContext.Set<TEntity>().AddAsync(entity);
+        await SaveChangesAsync();
     }
 
     public void Delete(TId id)
     {
         TEntity? entity = _dbContext.Set<TEntity>().Find(id);
         _dbContext.Set<TEntity>().Remove(entity);
+
+        SaveChanges();
     }
 
     public async Task DeleteAsync(TId id)
@@ -36,11 +40,14 @@ public abstract class BaseRepository<TDbContext, TEntity, TId> : IBaseRepository
 
         if (entity is not null)
             _dbContext.Set<TEntity>().Remove(entity);
+
+        await SaveChangesAsync();
     }
 
     public void Delete(TEntity entity)
     {
         _dbContext.Set<TEntity>().Remove(entity);
+        SaveChanges();
     }
 
     public TEntity? GetById(TId id)
@@ -61,5 +68,16 @@ public abstract class BaseRepository<TDbContext, TEntity, TId> : IBaseRepository
     public void Update(TEntity entity)
     {
         _dbContext.Set<TEntity>().Update(entity);
+        SaveChanges();
+    }
+
+    private async Task SaveChangesAsync()
+    {
+        await _dbContext.SaveChangesAsync();
+    }
+
+    private void SaveChanges()
+    {
+        _dbContext.SaveChanges();
     }
 }
