@@ -1,4 +1,6 @@
-﻿using GenericRepository.Domain.Base;
+﻿using System.Linq.Expressions;
+
+using GenericRepository.Domain.Base;
 
 using Microsoft.EntityFrameworkCore;
 
@@ -79,5 +81,15 @@ public abstract class BaseRepository<TDbContext, TEntity, TId> : IBaseRepository
     private void SaveChanges()
     {
         _dbContext.SaveChanges();
+    }
+
+    public bool Exists(Expression<Func<TEntity, bool>> expression)
+    {
+        return _dbContext.Set<TEntity>().Any(expression);
+    }
+
+    public async Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> expression)
+    {
+        return await _dbContext.Set<TEntity>().AnyAsync(expression);
     }
 }

@@ -10,4 +10,6 @@ public interface IBaseRepository<TEntity, TId>
     Task InsertAsync(TEntity entity);
     Task<IEnumerable<TEntity>> SelectAll();
     void Update(TEntity entity);
+    bool Exists(System.Linq.Expressions.Expression<Func<TEntity, bool>> expression);
+    Task<bool> ExistsAsync(System.Linq.Expressions.Expression<Func<TEntity, bool>> expression);
 }
