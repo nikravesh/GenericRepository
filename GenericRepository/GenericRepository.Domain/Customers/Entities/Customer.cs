@@ -13,7 +13,7 @@ public class Customer : BaseEntity
     {
     }
 
-    public Customer(string customerFirstName, string customerLastName, string customerEmail)
+    private Customer(string customerFirstName, string customerLastName, string customerEmail)
     {
         CustomerFirstName = customerFirstName;
         CustomerLastName = customerLastName;
