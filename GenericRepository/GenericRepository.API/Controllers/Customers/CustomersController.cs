@@ -27,6 +27,14 @@ public class CustomersController : ControllerBase
     {
         try
         {
+            bool isExist = await _customerRepository.ExistsAsync(c => 
+                           c.CustomerEmail == customer.CustomerEmail);
+
+            if(isExist)
+            {
+                return Content($"Customer with email : {customer.CustomerEmail} is exist!!");
+            }
+
             await _customerRepository.InsertAsync(customer);
 
             return Ok(customer);
