@@ -13,7 +13,7 @@ public class Product : BaseEntity
     {
     }
 
-    public Product(string productName, string productDescription, decimal productPrice)
+    private Product(string productName, string productDescription, decimal productPrice)
     {
         ProductName = productName;
         ProductDescription = productDescription;
